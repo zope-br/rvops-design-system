@@ -178,15 +178,18 @@ code,pre{font-family:var(--rv-font-mono)}
 .logo-var-card.dark-neutral{background:#181818;border:1px solid #2E2E2E}
 .logo-var-card.dark-colored{background:linear-gradient(135deg,#1a1060 0%,#0a1a3a 60%,#0d2a1a 100%);border:0}
 .logo-var-card.light-bg{background:#FFFFFF;border:1px solid #E9E9E9}
-.logo-var-card.mono-black{background:#F8F8F8;border:1px solid #E9E9E9}
+.logo-var-card.brand-orange{background:var(--rv-orange);border:0}
 .logo-var-label{font-family:var(--rv-font-mono);font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.12em;color:var(--rv-orange);margin-bottom:20px}
 .logo-var-card.dark-colored .logo-var-label,.logo-var-card.dark-neutral .logo-var-label{color:var(--rv-orange)}
-.logo-var-card.light-bg .logo-var-label,.logo-var-card.mono-black .logo-var-label{color:var(--rv-orange-deep)}
+.logo-var-card.light-bg .logo-var-label{color:var(--rv-orange-deep)}
+.logo-var-card.brand-orange .logo-var-label{color:#fff}
 .logo-var-filename{font-family:var(--rv-font-mono);font-size:11px;color:var(--rv-text-muted);margin-top:12px}
 .logo-var-card.dark-colored .logo-var-filename,.logo-var-card.dark-neutral .logo-var-filename{color:rgba(255,255,255,.4)}
+.logo-var-card.brand-orange .logo-var-filename{color:rgba(255,255,255,.55)}
 .logo-var-desc{font-size:13px;color:var(--rv-text-muted);margin-top:12px;line-height:1.55}
 .logo-var-card.dark-colored .logo-var-desc,.logo-var-card.dark-neutral .logo-var-desc{color:rgba(255,255,255,.5)}
-.logo-var-card.light-bg .logo-var-desc,.logo-var-card.mono-black .logo-var-desc{color:var(--rv-gray-500)}
+.logo-var-card.light-bg .logo-var-desc{color:var(--rv-gray-500)}
+.logo-var-card.brand-orange .logo-var-desc{color:rgba(255,255,255,.85)}
 /* SVG wordmark rvops */
 .rv-wm{display:block}
 /* Clear space demo */
@@ -216,7 +219,7 @@ code,pre{font-family:var(--rv-font-mono)}
 
 /* ---- MARKETING COMPONENTS ---- */
 .mktg-nav-preview{display:flex;align-items:center;gap:28px;padding:16px 24px;background:rgba(18,18,18,.92);backdrop-filter:blur(12px);border:1px solid var(--rv-line-dark);border-radius:var(--rv-r-xl)}
-.mktg-nav-preview .logo-text{font-family:var(--rv-font-display);font-weight:700;font-size:17px;background:var(--rv-grad-brand-linear);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.mktg-nav-preview .logo-text{font-family:var(--rv-font-display);font-weight:700;font-size:17px;color:#fff}
 .mktg-nav-preview ul{list-style:none;display:flex;gap:22px;flex:1}
 .mktg-nav-preview ul a{color:var(--rv-text-on-dark-strong);font-family:var(--rv-font-display);font-size:14px;font-weight:500}
 .mktg-nav-preview ul a:hover{color:var(--rv-orange)}
@@ -289,7 +292,7 @@ code,pre{font-family:var(--rv-font-mono)}
 .site-footer{background:var(--rv-bg-3);border-top:1px solid var(--rv-line-dark);padding:56px 0 32px}
 .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr 1fr;gap:40px;margin-bottom:48px}
 .footer-brand p{font-size:14px;color:var(--rv-text-on-dark);line-height:1.65;margin-top:16px;max-width:260px}
-.footer-brand .wordmark{font-family:var(--rv-font-display);font-size:22px;font-weight:700;background:var(--rv-grad-brand-linear);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.footer-brand .wordmark{font-family:var(--rv-font-display);font-size:22px;font-weight:700;color:#fff}
 .site-footer h5{font-family:var(--rv-font-display);font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:#fff;margin-bottom:14px}
 .site-footer ul{list-style:none;display:flex;flex-direction:column;gap:10px}
 .site-footer ul a{font-size:14px;color:rgba(255,255,255,.55);transition:color var(--rv-dur-1)}
@@ -458,7 +461,6 @@ html,body{background:#121212!important}
       <div class="hero-meta-item"><span class="hero-meta-key">Display font</span><span class="hero-meta-val">Poppins</span></div>
       <div class="hero-meta-item"><span class="hero-meta-key">Body font</span><span class="hero-meta-val">DM Sans</span></div>
       <div class="hero-meta-item"><span class="hero-meta-key">Radius botão</span><span class="hero-meta-val">4 px — sempre</span></div>
-      <div class="hero-meta-item"><span class="hero-meta-key">Rainbow</span><span class="hero-meta-val">só no "o" + feature icons</span></div>
     </div>
   </div>
 </div>
@@ -534,14 +536,6 @@ html,body{background:#121212!important}
           <div class="swatch-role">H2–H4, stats e títulos de seção. Alias via classe .degrade-text.</div>
         </div>
       </div>
-      <div style="display:flex;align-items:center;gap:20px">
-        <div class="swatch-chip brand-grad" style="width:160px;flex-shrink:0"></div>
-        <div>
-          <div class="swatch-name" style="margin-bottom:2px">--rv-grad-brand</div>
-          <div class="swatch-val" style="margin-bottom:2px">conic-gradient (arco-íris)</div>
-          <div class="swatch-role">Wordmark "o" e feature icons — uso restrito.</div>
-        </div>
-      </div>
     </div>
   </div>
 </section>
@@ -553,7 +547,7 @@ html,body{background:#121212!important}
   <div class="container">
     <p class="ds-section-label">§ 2</p>
     <h2 class="ds-section-title">Logo & Marca</h2>
-    <p style="font-size:15px;color:var(--rv-text-muted);margin-bottom:8px;max-width:680px">Wordmark <strong style="color:var(--rv-text)">rvops</strong> em caixa baixa. O "o" usa o gradiente arco-íris da marca — nunca substitua pelo laranja sólido. Quatro variações, cada uma para um contexto de superfície.</p>
+    <p style="font-size:15px;color:var(--rv-text-muted);margin-bottom:8px;max-width:680px">Wordmark <strong style="color:var(--rv-text)">rvops</strong> em caixa baixa. Quatro variações, cada uma para um contexto de superfície — fundo escuro neutro, escuro com cor, fundo claro e laranja da marca.</p>
     <p style="font-family:var(--rv-font-mono);font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--rv-orange);margin-bottom:24px;margin-top:28px">Wordmark · 4 variações oficiais</p>
 
     <div class="logo-var-grid" style="margin-bottom:16px">
@@ -574,16 +568,16 @@ html,body{background:#121212!important}
       <!-- Light bg -->
       <div class="logo-var-card light-bg">
         <p class="logo-var-label" style="color:var(--rv-orange-deep)">Use em fundo claro</p>
-        <img src="../i/logo/logo-rvops-escura.svg" alt="Logo black color" style="height:44px">
-        <p class="logo-var-filename" style="color:var(--rv-gray-400)">Logo_black_color.png</p>
-        <p class="logo-var-desc" style="color:var(--rv-gray-500)">Padrão para fundos brancos ou cinzas muito claros. Letras em preto, "o" no gradiente da marca para manter a personalidade.</p>
-      </div>
-      <!-- Mono black -->
-      <div class="logo-var-card mono-black">
-        <p class="logo-var-label" style="color:var(--rv-gray-500)">Versão preto sólido</p>
-        <img src="../i/logo/logo-rvops-branca-footer.svg" alt="Logo black" style="height:44px;filter:brightness(0)">
+        <img src="../i/logo/logo-rvops-branca-footer.svg" alt="Logo preta flat" style="height:44px;filter:brightness(0)">
         <p class="logo-var-filename" style="color:var(--rv-gray-400)">Logo_black.png</p>
-        <p class="logo-var-desc" style="color:var(--rv-gray-500)">Use quando o contraste pedir — impressão monocromática, carimbos, embossing, ou quando o "o" colorido prejudica a legibilidade.</p>
+        <p class="logo-var-desc" style="color:var(--rv-gray-500)">Padrão para fundos brancos ou cinzas muito claros. Versão preta sólida, sem gradiente.</p>
+      </div>
+      <!-- Brand orange -->
+      <div class="logo-var-card brand-orange">
+        <p class="logo-var-label">Use em fundo laranja da marca</p>
+        <img src="../i/logo/logo-revops-branca.svg" alt="Logo inteira branca" style="height:44px;filter:brightness(0) invert(1)">
+        <p class="logo-var-filename">Logo_white.png</p>
+        <p class="logo-var-desc">Logo inteira branca sobre o laranja da marca. Use em banners, CTAs e cards de destaque.</p>
       </div>
     </div>
 
@@ -617,8 +611,8 @@ html,body{background:#121212!important}
       <div class="dd-box dont">
         <div class="dd-head">✗ Logo — Não faça</div>
         <div class="dd-list">
-          <div class="dd-item">Logo branca sobre laranja sólido</div>
-          <div class="dd-item">Recolorir o "o" rainbow para laranja CTA</div>
+          <div class="dd-item">Logo com "o" colorido sobre fundo branco</div>
+          <div class="dd-item">Recolorir o wordmark para outro tom de laranja</div>
           <div class="dd-item">Distorcer proporções do wordmark</div>
           <div class="dd-item">Usar outra fonte para recriar o wordmark</div>
           <div class="dd-item">Colocar elementos dentro do clear space</div>
@@ -644,15 +638,15 @@ html,body{background:#121212!important}
       </div>
       <div class="type-row">
         <div class="type-meta">h1<br>64px / 400<br>−0.025em<br>grad-title-multi</div>
-        <div class="type-sample" style="font-size:44px;font-weight:400;letter-spacing:-0.025em;line-height:1.3;background:var(--rv-grad-title-multi);-webkit-background-clip:text;background-clip:text;color:transparent">Tudo que gera receita.</div>
+        <div class="type-sample" style="font-size:44px;font-weight:400;letter-spacing:-0.025em;line-height:1.3;background:linear-gradient(to right,#484747,#939393,#e9e9e9,#fffbf4,#727272);-webkit-background-clip:text;background-clip:text;color:transparent">Tudo que gera receita.</div>
       </div>
       <div class="type-row">
-        <div class="type-meta">h2<br>48px / 400<br>−0.02em</div>
-        <div class="type-sample" style="font-size:36px;font-weight:400;letter-spacing:-0.02em">Quando a receita anda junta.</div>
+        <div class="type-meta">h2<br>48px / 400<br>−0.02em<br>grad-title-mono</div>
+        <div class="type-sample" style="font-size:36px;font-weight:400;letter-spacing:-0.02em;background:linear-gradient(to right,#fff,#998b8b);-webkit-background-clip:text;background-clip:text;color:transparent">Quando a receita anda junta.</div>
       </div>
       <div class="type-row">
-        <div class="type-meta">h3<br>32px / 400<br>−0.015em</div>
-        <div class="type-sample" style="font-size:26px;font-weight:400;letter-spacing:-0.015em">Conversacional · Marketing · Vendas</div>
+        <div class="type-meta">h3<br>32px / 400<br>−0.015em<br>grad-title-mono</div>
+        <div class="type-sample" style="font-size:26px;font-weight:400;letter-spacing:-0.015em;background:linear-gradient(to right,#fff,#998b8b);-webkit-background-clip:text;background-clip:text;color:transparent">Conversacional · Marketing · Vendas</div>
       </div>
       <div class="type-row">
         <div class="type-meta">h4<br>24px / 400<br>−0.01em</div>
