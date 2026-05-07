@@ -68,11 +68,13 @@ img { max-width: 100%; display: block; }
 .logo-card.dn { background: #181818; border: 1px solid #2E2E2E; }
 .logo-card.dc { background: linear-gradient(135deg,#1a1060,#0a1a3a 60%,#0d2a1a); }
 .logo-card.lb { background: #FFFFFF; border: 1px solid #E9E9E9; }
-.logo-card.mb { background: #F8F8F8; border: 1px solid #E9E9E9; }
+.logo-card.bo { background: var(--or); border: 0; }
 .logo-card-lbl { font-family: var(--fn-m); font-size: 10px; font-weight: 400; text-transform: uppercase; letter-spacing: .1em; color: var(--or); margin-bottom: 16px; }
-.logo-card.lb .logo-card-lbl, .logo-card.mb .logo-card-lbl { color: var(--or-d); }
+.logo-card.lb .logo-card-lbl { color: var(--or-d); }
+.logo-card.bo .logo-card-lbl { color: #fff; }
 .logo-card-fn { font-family: var(--fn-m); font-size: 10px; color: rgba(255,255,255,.35); margin-top: 10px; }
-.logo-card.lb .logo-card-fn, .logo-card.mb .logo-card-fn { color: #aaa; }
+.logo-card.lb .logo-card-fn { color: #aaa; }
+.logo-card.bo .logo-card-fn { color: rgba(255,255,255,.55); }
 
 /* Clearspace */
 .clearspace { display: flex; align-items: center; gap: 32px; background: #fff; border: 1px solid #E9E9E9; border-radius: var(--r-card); padding: 32px; }
@@ -220,7 +222,7 @@ img { max-width: 100%; display: block; }
   <div class="wrap">
     <p class="s-label">§ 1</p>
     <h2 class="s-title">Logo & Marca</h2>
-    <p style="font-size:14px;color:var(--txt-m);margin-bottom:32px;line-height:1.65">Wordmark <strong style="color:var(--txt)">rvops</strong> em caixa baixa. O "o" usa o gradiente arco-íris da marca, nunca substitua pelo laranja sólido. Quatro variações para cada contexto de superfície.</p>
+    <p style="font-size:14px;color:var(--txt-m);margin-bottom:32px;line-height:1.65">Wordmark <strong style="color:var(--txt)">rvops</strong> em caixa baixa. Quatro variações para cada contexto de superfície — fundo escuro neutro, escuro com cor, fundo claro e laranja da marca.</p>
 
     <div class="logo-grid">
       <div class="logo-card dn">
@@ -235,13 +237,13 @@ img { max-width: 100%; display: block; }
       </div>
       <div class="logo-card lb">
         <p class="logo-card-lbl">Fundo claro</p>
-        <img src="../i/logo/logo-rvops-escura.svg" alt="Logo preta" style="height:36px">
-        <p class="logo-card-fn">Logo_black_color · fundo branco/cinza</p>
+        <img src="../i/logo/logo-rvops-branca-footer.svg" alt="Logo preta flat" style="height:36px;filter:brightness(0)">
+        <p class="logo-card-fn">Logo_black · fundo branco/cinza</p>
       </div>
-      <div class="logo-card mb">
-        <p class="logo-card-lbl">Versão preta sólida</p>
-        <img src="../i/logo/logo-rvops-branca-footer.svg" alt="Logo preta sólida" style="height:36px;filter:brightness(0)">
-        <p class="logo-card-fn">Logo_black · impressão / embossing</p>
+      <div class="logo-card bo">
+        <p class="logo-card-lbl">Fundo laranja da marca</p>
+        <img src="../i/logo/logo-revops-branca.svg" alt="Logo inteira branca" style="height:36px;filter:brightness(0) invert(1)">
+        <p class="logo-card-fn">Logo_white · banners / CTAs</p>
       </div>
     </div>
 
@@ -370,11 +372,6 @@ img { max-width: 100%; display: block; }
         <div class="chip no-border" style="width:160px;background:linear-gradient(to right,#FFFFFF,#998B8B)"></div>
         <div class="swatch-name">--rv-grad-title-mono</div>
         <div class="swatch-role">H2–H4, stats</div>
-      </div>
-      <div class="swatch">
-        <div class="chip no-border" style="width:80px;background:conic-gradient(from 90deg at 50% 50%,#F2C94C 0deg,#76C04E 60deg,#2D9CDB 120deg,#6E5BD3 180deg,#C84CA0 240deg,#EB5757 300deg,#F2994A 340deg,#F2C94C 360deg);border-radius:50%"></div>
-        <div class="swatch-name">--rv-grad-brand</div>
-        <div class="swatch-role">wordmark "o" only</div>
       </div>
     </div>
   </div>
