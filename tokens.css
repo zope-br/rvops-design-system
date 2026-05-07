@@ -1,0 +1,224 @@
+/**
+ * tokens.css — Rvops Design System v2.1
+ * Single source of truth. Extraído do CSS de produção (css-rvops.css).
+ * Todos os valores foram verificados diretamente no código do site.
+ *
+ * USO: importe este arquivo antes de qualquer CSS customizado.
+ * <link rel="stylesheet" href="tokens.css">
+ */
+
+/* ============================================================
+   IMPORTANTE: DOIS LARANJOS — contextos distintos
+   ============================================================
+   --rv-orange-cta  (#FDB92E) — laranja âmbar — cor histórica do site.
+                                Botões, links, ícones inline, bordas, tags.
+                                É a cor que aparece como "laranja" em classes
+                                como .laranja-eloz, .color-amarelo, etc.
+
+   --rv-orange      (#ff8428) — laranja vivo — usado EXCLUSIVAMENTE no
+                                gradiente de botão principal (.rv-grad-button).
+                                Não usar diretamente fora do gradiente.
+   ============================================================ */
+
+:root {
+
+  /* —— LARANJA (dois tokens, contextos distintos) ————————————— */
+  --rv-orange-cta:    #FDB92E;           /* primário do site: botões, links, tags */
+  --rv-orange-cta-hover: #E6A502;        /* hover do laranja âmbar */
+  --rv-orange-cta-muted: rgba(253,185,46,.12); /* tint em superfície escura */
+
+  --rv-orange:        #ff8428;           /* stop do gradiente de CTA */
+  --rv-orange-deep:   #DA6208;           /* outro stop do gradiente */
+  --rv-orange-light:  #FFB066;           /* versão clara (tint de texto) */
+
+  /* Gradientes de botão — ÚNICO uso de #ff8428 */
+  --rv-grad-button:   linear-gradient(to right, #DA6208, #ff8428, #DA6208);
+  --rv-grad-button-alt: linear-gradient(to right, #95421c, #ff8428, #BE4C18);
+  --rv-grad-icon:     linear-gradient(135deg, #DA6208 0%, #ff8428 50%, #FFB066 100%);
+
+
+  /* —— BACKGROUNDS ————————————————————————————————————————————— */
+  --rv-bg-1:          #121212;   /* deepest canvas — hero, mobile drawer */
+  --rv-bg-2:          #1E1E22;   /* page bg padrão — CRM Eloz default */
+  --rv-bg-3:          #222226;   /* raised surface — card, footer, nav bg */
+  --rv-bg-4:          #2E2E32;   /* hover surface, borders */
+  --rv-bg-mobile:     #0B0E14;   /* shell do menu mobile */
+  --rv-bg-mobile-card:#080A0E;   /* card dentro do menu mobile */
+  --rv-bg-light:      #FFFFFF;   /* páginas light — auth, pricing, blog */
+  --rv-bg-light-soft: #F4F4F5;   /* gray support para páginas light */
+  --rv-bg-input-dark: #2A2A2A;   /* input/search em superfície app */
+
+
+  /* —— TEXTO ——————————————————————————————————————————————————— */
+  --rv-text-on-dark:        #86868B;   /* body em fundo escuro */
+  --rv-text-on-dark-strong: #FFFFFF;   /* destaque em fundo escuro */
+  --rv-text-on-dark-sub:    #B5BDC9;   /* secundário móvel / subtítulos */
+  --rv-text-on-light:       #000000;   /* body em fundo claro */
+  --rv-text-muted-dark:     #6E7681;   /* muted / disabled em dark */
+  --rv-text-nav-link:       #DDDDDD;   /* links de nav */
+  --rv-text-nav-hover:      #FF8737;   /* hover de nav */
+
+
+  /* —— GRADIENTES DE TÍTULO ————————————————————————————————————— */
+  /* Aplicar via background-clip: text */
+  --rv-grad-title-mono:  linear-gradient(to right, #FFFFFF, #998B8B);
+  --rv-grad-title-multi: linear-gradient(to right, #484747, #939393, #E9E9E9, #FFFBF4, #727272);
+  --rv-grad-title-black: linear-gradient(to right, #3A3A3A, #2B2B2B, #1E1E1E, #111111, #000000);
+  --rv-degrade-text:     linear-gradient(to right, #FFFFFF, #998B8B); /* alias de --rv-grad-title-mono */
+  --rv-degrade-text2:    linear-gradient(to right, #262626, #B24D03);
+
+
+  /* —— BRAND RAINBOW — uso restrito ——————————————————————————— */
+  /* Permitido APENAS em: wordmark "o", app icon, feature icons PNG, social */
+  --rv-grad-brand: conic-gradient(from 90deg at 50% 50%,
+    #F2C94C 0deg,   #76C04E 60deg,  #2D9CDB 120deg,
+    #6E5BD3 180deg, #C84CA0 240deg, #EB5757 300deg,
+    #F2994A 340deg, #F2C94C 360deg);
+
+  --rv-grad-brand-linear: linear-gradient(90deg,
+    #F2994A, #F2C94C, #76C04E, #2D9CDB, #6E5BD3, #C84CA0, #EB5757);
+
+
+  /* —— GRAY RAMP (12 steps) ——————————————————————————————————— */
+  --rv-gray-50:  #F4F4F5;
+  --rv-gray-100: #E9E9E9;
+  --rv-gray-200: #C9C9CC;
+  --rv-gray-300: #939393;
+  --rv-gray-400: #86868B;
+  --rv-gray-500: #727272;
+  --rv-gray-600: #484747;
+  --rv-gray-700: #2E2E32;
+  --rv-gray-800: #222226;
+  --rv-gray-900: #1E1E22;
+  --rv-gray-950: #121212;
+
+  --rv-line-dark:  #2E2E32;   /* divisores em superfície escura */
+  --rv-line-light: #E9E9E9;   /* divisores em superfície clara */
+
+
+  /* —— SEMÂNTICOS (status de UI apenas) ————————————————————— */
+  --rv-success: #34C759;   /* verde Apple — status positivo */
+  --rv-warning: #F2C94C;   /* âmbar — alerta */
+  --rv-danger:  #EB5757;   /* vermelho — erro / risco */
+
+  /* WhatsApp */
+  --rv-whatsapp: #25D366;
+
+
+  /* —— CATEGORIAS DO DEMO/CRM (tags coloridas por módulo) ————— */
+  /* Marketing */
+  --cat-automacao:    #7C3AED;
+  --cat-leads:        #0EA5E9;
+  --cat-relatorios:   #22C55E;
+  --cat-integracoes:  #F59E0B;
+  --cat-crm:          #EF4444;
+  /* Vendas */
+  --cat-prospeccao:   #FB923C;
+  --cat-pipeline:     #2563EB;
+  --cat-propostas:    #EC4899;
+  --cat-forecast:     #6366F1;
+  --cat-relatorios-v: #16A34A;
+  --cat-integracoes-v:#14B8A6;
+  --cat-conversas:    #06B6D4;
+  /* CRM */
+  --cat-contatos:     #0EA5E9;
+  --cat-oportunidades:#F97316;
+  --cat-tarefas:      #A855F7;
+  --cat-automacao-crm:#7C3AED;
+  --cat-relatorios-c: #22C55E;
+  --cat-integracoes-c:#F43F5E;
+  --cat-whatsapp:     #25D366;
+  /* Atendimento */
+  --cat-chatbot:      #8B5CF6;
+  --cat-automacao-a:  #7C3AED;
+  --cat-relatorios-a: #22C55E;
+  --cat-integracoes-a:#F59E0B;
+  --cat-suporte:      #EF4444;
+  /* Base */
+  --cat-all:          #002240;
+
+
+  /* —— TIPOGRAFIA ————————————————————————————————————————————— */
+  --rv-font-display: "Poppins",  system-ui, -apple-system, sans-serif;
+  --rv-font-body:    "DM Sans",  system-ui, -apple-system, sans-serif;
+  --rv-font-mono:    "JetBrains Mono", SFMono-Regular, Menlo, monospace;
+  --rv-font-legacy:  "Lato", sans-serif;  /* legado em componentes antigos */
+
+
+  /* —— BORDER RADIUS ————————————————————————————————————————— */
+  --rv-r-button:  4px;    /* botão — SEMPRE 4px, nunca pill */
+  --rv-r-xs:      4px;
+  --rv-r-sm:      6px;
+  --rv-r-md:      10px;   /* inputs, tooltips */
+  --rv-r-lg:      16px;   /* cards */
+  --rv-r-xl:      24px;   /* hero containers */
+  --rv-r-pill:    999px;  /* avatars, status dots, badges */
+  /* Valores legado encontrados no CSS */
+  --rv-r-5:       5px;
+  --rv-r-12:      12px;
+  --rv-r-14:      14px;
+  --rv-r-22:      22px;
+  --rv-r-30:      30px;   /* usado em tags/botões antigos */
+
+
+  /* —— SOMBRAS ————————————————————————————————————————————————— */
+  --rv-sh-1:     0 1px 2px rgba(0,0,0,.30);
+  --rv-sh-2:     0 4px 12px rgba(0,0,0,.32);
+  --rv-sh-3:     0 12px 32px rgba(0,0,0,.40);
+  --rv-sh-4:     0 24px 64px rgba(0,0,0,.50);
+  --rv-sh-card:  0 10px 40px rgba(0,0,0,.08);    /* card light */
+  --rv-sh-glow:  0 8px 32px rgba(253,185,46,.28); /* glow CTA âmbar */
+  --rv-sh-glow-orange: 0 8px 32px rgba(255,132,40,.32); /* glow CTA gradiente */
+  --rv-sh-focus: 0 0 0 3px rgba(253,185,46,.35); /* focus ring */
+
+
+  /* —— MOTION ————————————————————————————————————————————————— */
+  --rv-ease:   cubic-bezier(0.2, 0.7, 0.1, 1);
+  --rv-ease-std: ease;
+  --rv-dur-1:  120ms;  /* hover, focus */
+  --rv-dur-2:  200ms;  /* card lift, modal open */
+  --rv-dur-3:  320ms;  /* section reveal */
+  --rv-dur-nav: 180ms; /* transições de nav */
+  --rv-dur-tab: 280ms; /* transições de tabs (horizontal e lateral) */
+  --rv-dur-acc: 350ms; /* transições de accordion (open/close) */
+
+
+  /* —— LAYOUT ————————————————————————————————————————————————— */
+  --rv-container:      1140px;   /* max-width Bootstrap (usado no site) */
+  --rv-container-wide: 1200px;   /* max-width custom sections */
+  --rv-nav-height:     68px;     /* altura da nav sticky */
+
+  /* Spacing scale (4-point grid) */
+  --rv-sp-1:  4px;
+  --rv-sp-2:  8px;
+  --rv-sp-3:  12px;
+  --rv-sp-4:  16px;
+  --rv-sp-5:  20px;
+  --rv-sp-6:  24px;
+  --rv-sp-8:  32px;
+  --rv-sp-10: 40px;
+  --rv-sp-12: 48px;
+  --rv-sp-16: 64px;
+  --rv-sp-20: 80px;
+  --rv-sp-24: 96px;
+
+
+  /* —— THEME ALIASES (dark default) ——————————————————————————— */
+  --rv-page-bg:        var(--rv-bg-1);
+  --rv-surface:        var(--rv-bg-2);
+  --rv-surface-raised: var(--rv-bg-3);
+  --rv-text:           var(--rv-text-on-dark-strong);
+  --rv-text-muted:     var(--rv-text-on-dark);
+  --rv-line:           var(--rv-line-dark);
+  --rv-accent:         var(--rv-orange-cta);  /* alias principal de ação */
+}
+
+/* —— LIGHT THEME override ————————————————————————————————————— */
+[data-theme="light"] {
+  --rv-page-bg:        var(--rv-bg-light);
+  --rv-surface:        var(--rv-bg-light);
+  --rv-surface-raised: var(--rv-bg-light-soft);
+  --rv-text:           var(--rv-text-on-light);
+  --rv-text-muted:     var(--rv-gray-500);
+  --rv-line:           var(--rv-line-light);
+}
