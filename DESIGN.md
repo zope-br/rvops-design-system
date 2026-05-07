@@ -40,14 +40,13 @@ Pragmático > vistoso. **Dark-first** — operadores ficam 8h/dia no CRM. Laranj
 
 ## 2. Logo
 
-Wordmark **rvops** em caixa baixa. O "o" carrega o gradiente arco-íris da marca — **nunca** substitua pelo laranja CTA.
+Wordmark **rvops** em caixa baixa. Quatro variações, cada uma para um contexto de superfície.
 
 | Arquivo | Uso |
 |---|---|
-| `Logo_white_color.png` | Fundo escuro **neutro** (preto, grafite). Padrão. |
-| `Logo_white.png` | Fundo escuro **com cor** (foto, gradiente, ilustração). Totalmente branca. |
-| `Logo_black_color.png` | Fundo claro (branco, cinza muito claro). |
-| `Logo_black.png` | Mono — impressão, embossing, baixo contraste. |
+| `Logo_white_color.png` | Fundo escuro **neutro** (preto, grafite). Padrão do site. |
+| `Logo_white.png` | Fundo escuro **com cor** (foto, gradiente) **ou laranja da marca**. Branca sólida, sem gradiente. |
+| `Logo_black.png` | Fundo claro (branco, cinza muito claro). Preta sólida, sem gradiente. |
 
 **URLs de produção:**
 - Header: `https://rvops.com/i/logo/logo-revops-branca.svg`
@@ -55,7 +54,7 @@ Wordmark **rvops** em caixa baixa. O "o" carrega o gradiente arco-íris da marca
 
 **Clear space.** Margem mínima = altura da letra `r` do wordmark, em todos os lados.
 
-**Nunca:** logo branca sobre laranja sólido. Wordmark recolorido. Distorcer proporções.
+**Nunca:** logo com "o" colorido sobre fundo branco. Wordmark recolorido. Distorcer proporções.
 
 ---
 
@@ -118,8 +117,8 @@ A paleta é **estrita**. Existe exatamente **uma cor de ação** (laranja) e **u
   #F2994A, #F2C94C, #76C04E, #2D9CDB, #6E5BD3, #C84CA0, #EB5757);
 ```
 
-**Permitido apenas em:** wordmark "o", app icon, ícones de produto PNG (§8.1), redes sociais, texto decorativo footer.
-**Proibido em:** botões, body copy, ícones de apoio, backgrounds amplos.
+**Permitido apenas em:** ícones de produto PNG (§8.1), app icon, redes sociais.
+**Proibido em:** wordmark, botões, body copy, ícones de apoio, backgrounds amplos.
 
 ### 3.6 Gray ramp (12 steps)
 
@@ -585,7 +584,8 @@ Nunca > 600ms. Sempre respeitar `prefers-reduced-motion`.
 
 - Poppins para headings, DM Sans para corpo.
 - `--rv-orange` como única cor de ação.
-- Rainbow: wordmark "o", ícones PNG de produto, app icon, social.
+- Rainbow: apenas ícones PNG de produto, app icon, social.
+- Wordmark: branca em fundo escuro/laranja, preta sólida em fundo claro.
 - Dark-first — light apenas em login, pricing, blog.
 - Botões: 4px de raio. Sempre. `font-weight: 500`.
 - Whitespace 80–96px entre seções.
@@ -599,7 +599,7 @@ Nunca > 600ms. Sempre respeitar `prefers-reduced-motion`.
 
 ### ❌ Don't
 
-- Rainbow em body copy, separadores ou ícones de apoio.
+- Rainbow em body copy, separadores, ícones de apoio ou no wordmark.
 - Outros accents além do laranja.
 - Botões pill (radius > 8px).
 - Recolorir wordmark.
@@ -621,7 +621,7 @@ Nunca > 600ms. Sempre respeitar `prefers-reduced-motion`.
 4. Declarar surface — seguir pairing §7.7.
 5. CTA: `--rv-grad-button` + `border-radius: 4px`.
 6. Footer: `--rv-bg-3` + `logo-rvops-branca-footer.svg`.
-7. Rainbow: apenas nos 5 usos de §3.5.
+7. Rainbow: apenas em ícones PNG de produto, app icon e social (§3.5). Nunca no wordmark.
 8. Ícones de produto: PNG rainbow fundo preto (§8.1).
 9. Stat numbers: `--rv-grad-title-mono`, nunca laranja.
 10. Títulos: weight **400**. Nunca 500+ em h1–h4.
